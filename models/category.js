@@ -1,7 +1,5 @@
-const { timeStamp } = require("console");
 const mongoose = require("mongoose");
-const { type } = require("os");
-const categorySchema = mongoose.Schema(
+const CategorySchema = mongoose.Schema(
   {
     title: {
       type: String,
@@ -11,5 +9,5 @@ const categorySchema = mongoose.Schema(
   { timeStamp: true }
 );
 
-const category = mongoose.model("categories", categorySchema);
-module.exports = category;
+const Category = mongoose.model("categories", CategorySchema);
+module.exports = Category;
