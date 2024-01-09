@@ -8,6 +8,7 @@ const port = 5000;
 const categoryRoute = require("./routes/categories");
 const productRoute = require("./routes/products");
 const billRoute = require("./routes/bills");
+const authRoute = require("./routes/auth");
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use(cors());
 app.use("/categories", categoryRoute);
 app.use("/products", productRoute);
 app.use("/bills", billRoute);
+app.use("/auth", authRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello world");
