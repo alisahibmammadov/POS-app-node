@@ -9,6 +9,7 @@ const categoryRoute = require("./routes/categories");
 const productRoute = require("./routes/products");
 const billRoute = require("./routes/bills");
 const authRoute = require("./routes/auth");
+const userRoute = require("./routes/users");
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use("/categories", categoryRoute);
 app.use("/products", productRoute);
 app.use("/bills", billRoute);
 app.use("/auth", authRoute);
+app.use("/users", userRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello world");
