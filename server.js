@@ -6,6 +6,7 @@ const cors = require("cors");
 const port = 5000;
 // routes
 const categoryRoute = require("./routes/categories");
+const productRoute = require("./routes/products");
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ const connect = async () => {
 app.use(express.json());
 app.use(cors());
 app.use("/categories", categoryRoute);
+app.use("/products", productRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello world");
