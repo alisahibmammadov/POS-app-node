@@ -3,36 +3,36 @@ const billSchema = mongoose.Schema(
   {
     customerName: {
       type: String,
-      required: true,
+      require: true,
     },
     customerPhoneNumber: {
       type: String,
-      required: true,
+      require: true,
     },
     paymentMod: {
       type: String,
-      required: true,
+      require: true,
     },
 
     cartItems: {
       type: Array,
-      required: true,
+      require: true,
     },
     subTotal: {
       type: Number,
-      required: true,
+      require: true,
     },
     tax: {
       type: Number,
-      required: true,
+      require: true,
     },
     totalAmount: {
       type: Number,
-      required: true,
+      require: true,
     },
   },
   {
-    timeStamp: true,
+    timestamps: true,
   }
 );
 const Bill = mongoose.model("bills", billSchema);

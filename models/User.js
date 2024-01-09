@@ -3,22 +3,22 @@ const UserSchema = mongoose.Schema(
   {
     username: {
       type: String,
-      required: true,
+      require: true,
     },
     email: {
       type: String,
-      required: true,
+      require: true,
     },
     password: {
       type: String,
-      required: true,
+      require: true,
     },
     verify: {
       type: Boolean,
-      required: true,
+      require: true,
     },
   },
-  { timeStamp: true }
+  { timestamps: true }
 );
 const User = mongoose.model("users", UserSchema);
 module.exports = User;

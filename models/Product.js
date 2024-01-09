@@ -3,22 +3,22 @@ const ProductSchema = mongoose.Schema(
   {
     title: {
       type: String,
-      required: true,
+      require: true,
     },
     img: {
       type: String,
-      required: true,
+      require: true,
     },
     price: {
       type: Number,
-      required: true,
+      require: true,
     },
     category: {
       type: String,
-      required: true,
+      require: true,
     },
   },
-  { timeStamp: true }
+  { timestamps: true }
 );
 const Product = mongoose.model("products", ProductSchema);
 module.exports = Product;
